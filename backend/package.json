@@ -1,0 +1,8 @@
+{
+  "name": "receitas-backend",
+  "version": "1.0.0",
+  "main": "script.js",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
