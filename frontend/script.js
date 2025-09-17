@@ -1,3 +1,7 @@
+const BACKEND_IP = "172.31.26.48";   // exemplo de IP privado do backend
+const BACKEND_PORT = 25000;          // porta do backend
+const BACKEND_URL = `http://${BACKEND_IP}:${BACKEND_PORT}`;
+
 // Variável global para armazenar os dados das receitas
 let recipesData = null;
 
@@ -5,8 +9,8 @@ let recipesData = null;
 async function fetchRecipesData() {
     try {
         console.log('🔄 Carregando receitas do backend...');
-        const response = await fetch('../backend/receitas.json');
-        
+        const response = await fetch(BACKEND_URL); // chama o JSON diretamente do backend
+
         if (!response.ok) {
             throw new Error(`Erro HTTP: ${response.status} - ${response.statusText}`);
         }
@@ -32,13 +36,13 @@ function createRecipeCard(receita) {
     };
     
     const difficultyClass = normalizeDifficulty(receita.dificuldade);
-    
+    const imgSrc = `http://${BACKEND_IP}:${BACKEND_PORT}/${receita.imagem}`;
     // Debug para verificar as classes geradas
     console.log(`Receita: ${receita.nome}, Dificuldade: ${receita.dificuldade}, Classe: ${difficultyClass}`);
     
     return `
         <div class="recipe-card">
-            <div class="recipe-image" style="background-image: url('${receita.imagem}')" alt="${receita.nome}"></div>
+            <div class="recipe-image" style="background-image: url('${imgSrc}')" alt="${receita.nome}"></div>
             <div class="recipe-content">
                 <h3 class="recipe-title">${receita.nome}</h3>
                 <div class="difficulty ${difficultyClass}">${receita.dificuldade}</div>

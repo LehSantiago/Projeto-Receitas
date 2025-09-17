@@ -1,7 +1,7 @@
 {
   "name": "backend-receitas",
   "version": "1.0.0",
-  "description": "Backend simples para receitas",
+  "description": "Backend simples para as receitas",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
