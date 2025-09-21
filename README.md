@@ -45,7 +45,7 @@ Internet → [Frontend EC2] → [Backend EC2]
 
 ## Desenvolvido por
 
-**Letícia Santiago** e **Isadora Brandão**
+**Letícia Santiago**, **Isadora Brandão** e **Bruna França**
 
 ---
 
