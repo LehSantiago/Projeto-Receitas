@@ -7,6 +7,9 @@ Sistema web completo para exibição de receitas de sobremesas, desenvolvido com
 O **Doces & Sabores** é uma aplicação web responsiva que apresenta receitas de sobremesas de forma elegante e interativa. Desenvolvido como projeto prático para demonstrar competências em desenvolvimento full-stack, containerização e deploy em nuvem.
 
 **🌐 [Acesse a aplicação](http://3.214.212.212:8080)**
+## Demo da Aplicação
+
+![Demo do Doces & Sabores](./frontend/video.gif)
 
 ## Arquitetura da Solução
 
